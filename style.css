@@ -1,0 +1,293 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Nunito", sans-serif;
+}
+li {
+  list-style: none;
+}
+:root {
+  --shadow: rgba(0, 0, 0, 0.616);
+}
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+header {
+  z-index: 2;
+  height: 60px;
+  box-shadow: 1px 1px 3px var(--shadow);
+}
+header nav {
+  padding: 15px 0px;
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header nav ul li {
+  font-size: 1.2rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+header nav ul li:hover {
+  font-weight: 500;
+}
+header nav p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+}
+header nav p span {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+/* main */
+main {
+  min-height: calc(100vh - 120px);
+}
+
+section:nth-child(1) .container {
+  overflow: hidden;
+}
+section .hero {
+  background: url("./assets/images/architect.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s linear;
+}
+section .hero h1:hover {
+  transform: scale(1.1);
+}
+section .hero h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+section .hero h1 span {
+  padding: 10px 15px;
+  margin-right: 5px;
+  background-color: rgba(0, 0, 0, 0.685);
+  color: white;
+}
+
+/* grid*/
+.image-hero {
+  margin-bottom: 35px;
+}
+.image-hero h3 {
+  display: inline-block;
+  margin: 50px 0px;
+  font-size: 1.5rem;
+  position: relative;
+}
+.image-hero p {
+  margin-bottom: 25px;
+}
+.image-hero h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 4;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+}
+.image-hero .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.image-box {
+  cursor: pointer;
+  position: relative;
+  /* background-color: yellow; */
+  overflow: hidden;
+  transition: 0.3s ease-in;
+}
+.image-box:hover img {
+  transform: scale(1.3);
+}
+.image-box img {
+  width: 100%;
+}
+.image-box p {
+  position: absolute;
+  font-weight: 600;
+  font-size: 0.8rem;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+}
+
+/* user section */
+.user-hero {
+  width: 100%;
+  /* background-color: red; */
+}
+.user-hero h3 {
+  display: inline-block;
+  margin: 50px 0px;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.user-hero h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 4;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+}
+.user-hero p {
+  margin-bottom: 50px;
+}
+
+.user-hero .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.user-hero .child img {
+  width: 100%;
+}
+.user-hero .child .contents h1 {
+  font-weight: 800;
+  font-size: 1.7rem;
+  margin: 10px 0px;
+}
+.user-hero .child .contents h2 {
+  font-weight: 300;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.user-hero .child .contents p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.user-hero .child .contents button {
+  background: rgba(224, 224, 224, 0.726);
+  color: rgb(0, 0, 0);
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 10px 0px;
+  transition: 0.3s ease;
+}
+.user-hero .child .contents button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* contacts us */
+section:nth-child(4) .user-hero h3 {
+  margin-bottom: 20px;
+}
+section:nth-child(4) .user-hero p {
+  margin: 20px 0px;
+}
+section:nth-child(4) .user-hero form {
+  width: 100%;
+}
+section:nth-child(4) .user-hero input {
+  width: 100%;
+  padding: 10px 10px;
+  color: rgba(0, 0, 0, 0.486);
+  margin: 10px 0px;
+}
+section:nth-child(4) .user-hero button {
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+section:nth-child(4) .user-hero button:hover {
+  background-color: white;
+  color: black;
+}
+
+section .bg-image {
+  margin-top: 50px;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+section .bg-image img {
+  width: 100%;
+  height: 100%;
+}
+section .bg-image:hover img {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+/* footer */
+footer {
+  background-color: black;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p {
+  font-size: 0.8rem;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+}
+footer p span {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* for mobile */
+@media only screen and (max-width: 600px) {
+    section .hero {
+        height: 300px;
+      }
+  .image-hero .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .user-hero .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  section .bg-image {
+    height: 50vh;
+  }
+}
